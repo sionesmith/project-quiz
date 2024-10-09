@@ -100,7 +100,30 @@ const questions = [
     answer: "Rotorua"
   }
 ];
+const q = questions[0].question;
+console.log(q)
+const iQuestion = document.getElementById('question');
+iQuestion.innerText = questions [0].question;
+
+const a = document.getElementById('first')
+a.innerText = questions[0].options[0]
+console.log(a)
+
+const b  = document.getElementById('second')
+b.innerText = questions[0].options[1]
+console.log(b)
+
+const c = document.getElementById('third')
+c.innerText = questions[0].options[2]
+console.log(c)
+
+const d = document.getElementById('forth')
+d.innerText = questions[0].options[3]
+console.log(d)
+
 
 // Add your code underneath this comment.
+const element = document.getElementById('  ');
+element.innerText = "  ";
 
 
