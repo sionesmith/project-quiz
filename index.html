@@ -9,14 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sions's 3000 Quiz</h1>
+        <h1>Sione's 3000 Quiz</h1>
         <h3>Question: 1 -  Your score: 0</h3>
         <p id="question">Question</p>
-        <div id="first" class="answers">answers</div>
-        <div id="second" class="answers">answers</div>
-        <div id="third" class="answers">answers</div>
-        <div id="forth" class="answers">answers</div>
-        <button id="submit">submit</button>
+
+        <div id="first" onclick="firstClick()" class="answers">answers</div>
+
+        <div id="second" onclick="secondClick()" class="answers">answers</div>
+
+        <div id="third" onclick="thirdClick()" class="answers">answers</div>
+
+        <div id="forth" onclick="forthClick()" class="answers">answers</div>
+
+        <button id="submit" onclick="submitAnswer()">Submit Answer</button>
     </div>
     <script src="script.js"></script>
 </body>
