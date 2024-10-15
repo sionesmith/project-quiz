@@ -116,9 +116,39 @@ function forthClick(){
   clearTheBackground()
   const element=document.getElementById('forth')
   element.style.backgroundColor="blue";
-};
-function submitAnswer(){
-
-}
+  let questionIndex = 0;
+  let myQuestion = document.getElementById("question");
+  myQuestion.innerText = questionsArr[questionIndex].question;
+  let answerOne = document.getElementById("first");
+  answerOne.innerText = questionsArr[questionIndex].options[0];
+  let answerTwo = document.getElementById("second");
+  answerTwo.innerText = questionsArr[questionIndex].options[1];
+  let answerThree = document.getElementById("third");
+  answerThree.innerText = questionsArr[questionIndex].options[2];
+  let answerFour = document.getElementById("fourth");
+  answerFour.innerText = questionsArr[questionIndex].options[3];
+  let answersArr = [answerOne, answerTwo, answerThree, answerFour];
+  let selectedAnswer = null;}
+  
+  answersArr.forEach((answer) => {
+    answer.addEventListener('click', function() {
+      if(selectedAnswer) {
+        //reset all selected elements to default
+        selectedAnswer.style.backgroundColor = '';
+      }
+        selectedAnswer = answer;
+        selectedAnswer.style.backgroundColor = 'lightgray';
+    })
+  });
+  const submitButton = document.getElementById('submit');
+  submitButton.addEventListener('click', submitAnswer);
+  const correctAnswer = questionsArr[questionIndex].answer;
+  function submitAnswer () {
+    if (selectedAnswer.innerText == correctAnswer) {
+      selectedAnswer.style.backgroundColor = 'red';
+  }
+   answersArr[1].style.backgroundColor = 'green';
+   submitButton.innerText = "Next Question";
+  }
 
 // Add your code underneath this comment.
